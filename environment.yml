@@ -1,0 +1,36 @@
+name: rag-agent-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - nodejs=20  # MCP 서버 실행 및 클로드 코드 연동을 위해 필요
+  - graphviz   # 랭그래프 시각화 엔진
+  - pip:
+      # 1. 핵심 프레임워크
+      - langchain
+      - langchain-anthropic    # 클로드 모델 연동
+      - langgraph              # 멀티 에이전트 워크플로우 제어 (필수!)
+      - langchain-mcp-adapters # MCP 도구를 랭체인에서 쓰기 위한 어댑터 (2026 신상)
+      - mcp[cli]               # Model Context Protocol SDK
+      
+      # 2. RAG & 벡터 데이터베이스
+      - faiss-cpu              # 로컬 벡터 DB
+      - chromadb               # 가벼운 오픈소스 벡터 DB
+      - sentence-transformers  # 임베딩 모델 실행용
+      
+      # 3. 문서 파싱 및 전처리 
+      - pymupdf                  # PDF 읽기
+      - beautifulsoup4         # 웹 크롤링
+      
+      # 4. 에이전트 도구
+      - tavily-python          # AI 전용 고성능 검색 엔진
+      - duckduckgo-search      # 무료 검색 도구
+      - pandas                 # 데이터 분석
+      - sqlalchemy             # DB 연동
+      
+      # 5. 모니터링 및 유틸리티
+      - langsmith              # 에이전트 실행 과정 추적 (디버깅 필수)
+      - python-dotenv          # API 키 관리
+      - pygraphviz             # 랭그래프 시각화 파이썬 라이브러리

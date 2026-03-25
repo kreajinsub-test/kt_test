@@ -1,0 +1,20 @@
+{
+  "name": "RAG-Conda-Env",
+  "image": "mcr.microsoft.com/devcontainers/anaconda:3",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-code",
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/conda/envs/rag-agent-env/bin/python",
+        "python.terminal.activateEnvInSelectedTerminal": true
+      }
+    }
+  },
+
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y graphviz && conda env create -f environment.yml && conda init bash && echo 'conda activate rag-agent-env' >> ~/.bashrc && npm install -g @anthropic-ai/claude-code"
+}

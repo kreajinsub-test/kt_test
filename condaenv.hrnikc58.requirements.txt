@@ -1,0 +1,17 @@
+langchain
+langchain-anthropic
+langgraph
+langchain-mcp-adapters
+mcp[cli]
+faiss-cpu
+chromadb
+sentence-transformers
+pymupdf
+beautifulsoup4
+tavily-python
+duckduckgo-search
+pandas
+sqlalchemy
+langsmith
+python-dotenv
+pygraphviz
