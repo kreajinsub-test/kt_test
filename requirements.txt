@@ -1,7 +1,9 @@
 langchain
 langchain-anthropic
 langchain-community
+langchain-openai
 langgraph
+openai
 
 faiss-cpu
 sentence-transformers
@@ -10,3 +12,4 @@ pymupdf
 python-dotenv
 pandas
 matplotlib
+gradio
