@@ -1,15 +1,23 @@
 langchain
-langchain-anthropic
 langchain-community
 langchain-openai
+langchain-text-splitters
+langchain-experimental
 langgraph
+langchain-mcp-adapters
 openai
 
 faiss-cpu
-sentence-transformers
 pymupdf
 
+gradio
 python-dotenv
 pandas
-matplotlib
-gradio
+tqdm
+networkx
+wikipedia
+duckduckgo-search
+
+langchain-graph-retriever
+graph-retriever
+graph-rag-example-helpers
